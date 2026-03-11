@@ -1,0 +1,16 @@
+<p>my-first-component works!</p>
+<div class="profil">
+  <h1>Profil de {{getFullName()}}</h1>
+  <p>Age : {{age}} ans</p>
+  <p>Email : {{email}}</p>
+  <p>Score : {{score}}/100</p>
+  <p>Categorie : {{getCategorie()}}</p>
+  <p>Annee de naissance : {{2026 - age}}</p>
+</div>
+
+<table>
+  <tr *ngFor="let etudiant of etudiants; let i = index">
+    <td>{{ etudiant.nom }}</td>
+    <td>{{ etudiant.note }}</td>
+  </tr>
+</table>

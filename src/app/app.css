@@ -1,0 +1,14 @@
+label{
+  color: brown;
+  font-family: Arial;
+}
+#btn{
+  background-color: cadetblue;
+  color: greenyellow;
+}
+.d{
+  margin-bottom: 20px;
+}
+h1{
+  color: blue;
+}

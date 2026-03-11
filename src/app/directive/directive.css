@@ -1,0 +1,10 @@
+table{
+  border: solid 1px;
+}
+tr, td{
+  border: solid 1px;
+}
+.termine { background: green; color: white; }
+.en-cours { background: orange; color: white; }
+.annule { background: red; color: white; }
+

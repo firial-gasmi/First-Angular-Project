@@ -1,0 +1,40 @@
+<p>directive works!</p>
+<div *ngIf="estConnecte">Bienvenue !</div>
+<div *ngIf="estConnecte; else nonConnecte">Bienvenue !</div>
+<ng-template #nonConnecte><div>Connectez-vous</div></ng-template>
+<button (click)="estConnecte = true" *ngIf="!estConnecte">
+  Se connecter
+</button>
+<div *ngIf="estConnecte">Vous êtes connecté</div>
+<div *ngIf="age >= 18; else mineur">Majeur</div>
+<ng-template #mineur><div>Mineur</div></ng-template>
+<table>
+  <tr *ngFor="let etudiant of etudiants; let i = index">
+    <td>{{ i + 1 }}</td>
+    <td>{{ etudiant.nom }}</td>
+    <td>{{ etudiant.note }}/20</td>
+  </tr>
+</table>
+<div [ngSwitch]="role">
+  <div *ngSwitchCase="'admin'">Panneau admin</div>
+  <div *ngSwitchCase="'user'">Panneau utilisateur</div>
+  <div *ngSwitchDefault>Rôle inconnu</div>
+</div>
+<div class="card" [ngClass]="classes">
+  {{ statut }}
+</div>
+
+<div class="barre-container">
+  <div class="barre" [ngStyle]="stylesBarre">
+    {{ progression }}%
+  </div>
+</div>
+
+
+<form (ngSubmit)="soumettre()">
+  <input [(ngModel)]="user.nom" name="nom" placeholder="Nom">
+  <input [(ngModel)]="user.email" name="email" type="email">
+  <input [(ngModel)]="user.age" name="age" type="number">
+  <button type="submit">Envoyer</button>
+</form>
+
